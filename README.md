@@ -1,5 +1,11 @@
 # RHH
- Analysis of DC Reddit Happy Hour Locations
+Analysis of DC Reddit Happy Hour Locations
+
+# Running
+This analysis uses the streamlit library for a front end. Execute the code using:
+```
+streamlit run RHH.py
+```
 
 # Setup
 Setup conda envrionment:
