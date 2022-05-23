@@ -1,0 +1,42 @@
+Venue,Visits,Address,lat,lon,Closest Metros
+Astro Beer Hall,2,"1306 G St NW, Washington, DC 20005",38.8980972,-77.030295,['Metro Center']
+Atlas Brew Works,1,"1201 Half St SE suite 120, Washington, DC 20003",38.8757597,-77.0072582,['Navy Yard - Ballpark']
+Bar Deco,1,"717 6th St NW, Washington, DC 20001",38.8988782,-77.01964629999999,['Gallery Pl-Chinatown']
+Bardo,1,"25 Potomac Ave SE, Washington, DC 20003",38.8709083,-77.00813800000002,['Navy Yard - Ballpark']
+Big Hunt,12,"1345 Connecticut Ave NW, Washington, DC 20036",38.9084865,-77.0424061,"['Farragut North', 'Farragut West']"
+Boardwalk,3,"507 7th St NW, Washington, DC 20004",38.8964294,-77.0217498,"['Gallery Pl-Chinatown', ""Archives-Navy Mem'l""]"
+Buffalo Billiards,13,"1330 19th St NW, Washington, DC 20036",38.9078299,-77.04323389999999,['Dupont Circle']
+Church Hall,1,"1070 Wisconsin Ave NW, Washington, DC 20007",38.9046077,-77.0629451,['Rosslyn']
+Continental Beer Garden,5,"1901 Fort Myer Dr, Arlington, VA 22209",38.89741799999999,-77.0721588,['Rosslyn']
+Continental Pool Lounge,1,"1911 Fort Myer Drive @ the corner of Lee Hwy &, N Moore St, Arlington, VA 22209",38.8982673,-77.07119759999999,['Rosslyn']
+Crimson DC,1,"627 H St NW, Washington, DC 20001",38.899998,-77.0212009,['Gallery Pl-Chinatown']
+DC Reynolds,1,"3109 Georgia Ave NW, Washington, DC 20010",38.9293546,-77.02299289999999,['Columbia Heights']
+DC9,6,"1940 9th St NW, Washington, DC 20001",38.9167019,-77.0242749,['U St/African-Amer Civil War Memorial/Cardozo']
+Electric Cool Aid,3,"512 Rhode Island Ave NW, Washington, DC 20001",38.9129398,-77.0194741,['Shaw-Howard Univ']
+Exiles,60,"1610 U St NW, Washington, DC 20009",38.9167949,-77.0373087,['U St/African-Amer Civil War Memorial/Cardozo']
+Franklin Hall,16,"1348 Florida Ave NW, Washington, DC 20009",38.920043,-77.031249,"['U St/African-Amer Civil War Memorial/Cardozo', 'Columbia Heights']"
+H Street Country Club,1,"1335 H S3400 Georgia Ave NW, Washington, DC 20010t NE, Washington, DC 20002",38.9322577,-77.02410619999999,['Georgia Ave Petworth']
+Hook Hall,1,"3400 Georgia Ave NW, Washington, DC 20010",38.9322577,-77.02410619999999,['Georgia Ave Petworth']
+Iron Horse,36,"507 7th St NW, Washington, DC 20004",38.8964294,-77.0217498,"['Gallery Pl-Chinatown', ""Archives-Navy Mem'l""]"
+Lost & Found,6,"1240 9th St NW, Washington, DC 20001",38.9067768,-77.0241781,['Mt Vernon Sq - 7th St Convention Center']
+Lou's City Bar,2,"1400 Irving St NW, Washington, DC 20010",38.9285585,-77.0332571,['Columbia Heights']
+Meridian Pint,5,"3400 11th St NW, Washington DC, DC 20010-2295",38.9320096,-77.0284922,"['Columbia Heights', 'Georgia Ave Petworth']"
+Metrobar,1,"640 Rhode Island Ave NE, Washington, DC 20002",38.9217439,-76.99774200000002,['Rhode Island Ave']
+Midlands,8,"3333 Georgia Ave NW, Washington, DC 20010",38.9317553,-77.0232065,['Georgia Ave Petworth']
+Mission (in Dupont),1,"1606 20th St NW, Washington, DC 20009",38.9114488,-77.0452464,['Dupont Circle']
+Mr Smith's of Georgetown,3,"3205 Water St NW, Washington, DC 20007",38.9028406,-77.0631247,['Foggy Bottom GWU']
+Passenger,3,"1539 7th St NW, Washington, DC 20001",38.910705,-77.02164739999999,"['Shaw-Howard Univ', 'Mt Vernon Sq - 7th St Convention Center']"
+Penn Social,3,"801 E St NW, Washington, DC 20004",38.896305,-77.02328899999999,"['Gallery Pl-Chinatown', ""Archives-Navy Mem'l""]"
+Recessions,2,"1823 L St NW, Washington, DC 20036",38.9040125,-77.04263879999999,"['Farragut West', 'Farragut North']"
+Rocket Bar,9,"714 7th St NW, Washington, DC 20001",38.89900799999999,-77.0222393,['Gallery Pl-Chinatown']
+Sauf Haus,5,"1216 18th St NW, Washington, DC 20036",38.9063163,-77.0418547,"['Farragut West', 'Farragut North']"
+Silver Branch Brewing Company,1,"8401 Colesville Rd #150, Silver Spring, MD 20910",38.9949818,-77.0312227,['Silver Spring']
+Smoke & Barrel,10,"2471 18th St NW, Washington, DC 20009",38.9222749,-77.0422452,['Woodley Park-Zoo Adams Morgan']
+Solly's,26,"1942 11th St NW, Washington, DC 20001",38.91683949999999,-77.02736759999999,['U St/African-Amer Civil War Memorial/Cardozo']
+Spider Kelly's,3,"3181 Wilson Blvd, Arlington, VA 22201",38.8865215,-77.0965964,['Clarendon']
+Stetson's,12,"1610 U St NW, Washington, DC 20009",38.9167949,-77.0373087,['U St/African-Amer Civil War Memorial/Cardozo']
+The Brig,1,"1007 8th St SE, Washington, DC 20003",38.8778344,-76.995256,['Eastern Market']
+The Eleanor,1,"100 Florida Ave NE, Washington, DC 20002",38.9089241,-77.0035912,['NoMa - Gallaudet U']
+Ugly Mug,2,"723 8th St SE, Washington, DC 20003",38.8804673,-76.9951997,['Eastern Market']
+Union Pub,7,"201 Massachusetts Ave NE, Washington, DC 20002",38.8947122,-77.0026132,['Union Station']
+Whiskey Charlie,1,"975 7th St SW, Washington, DC 20024",38.8784782,-77.0234888,"['Waterfront', ""L'Enfant Plaza""]"

@@ -1,0 +1,276 @@
+Number,Date,Venue,Venue_2,Official
+262,5/20/2022,Electric Cool Aid,,TRUE
+261,5/13/2022,Atlas Brew Works,,TRUE
+260,5/6/2022,Smoke & Barrel,,TRUE
+-13,4/29/2022,Boardwalk,,FALSE
+259,4/22/2022,DC9,,TRUE
+258,4/15/2022,Continental Beer Garden,,TRUE
+-12,4/8/2022,Solly's,,FALSE
+-11,4/1/2022,Astro Beer Hall,,FALSE
+-10,3/25/2022,DC9,,FALSE
+-9,3/18/2022,Electric Cool Aid,,FALSE
+-8,3/11/2022,Bar Deco,,FALSE
+-7,3/4/2022,Penn Social,,FALSE
+-6,2/25/2022,Rocket Bar,,FALSE
+-5,2/18/2022,Continental Pool Lounge,,FALSE
+-4,2/11/2022,Astro Beer Hall,,FALSE
+-3,2/4/2022,Rocket Bar,,FALSE
+-2,1/28/2022,Boardwalk,,FALSE
+-1,1/21/2022,Sauf Haus,,FALSE
+257,12/17/2021,Exiles,,TRUE
+256,12/10/2021,Spider Kelly's,,TRUE
+255,12/3/2021,Exiles,,TRUE
+254,11/19/2021,Solly's,,TRUE
+253,11/12/2021,Midlands,,TRUE
+252,11/5/2021,Sauf Haus,,TRUE
+251,10/29/2021,DC9,,TRUE
+250,10/22/2021,Crimson DC,Solly's,TRUE
+249,10/15/2021,Electric Cool Aid,,TRUE
+248,10/8/2021,Continental Beer Garden,,TRUE
+247,10/1/2021,Whiskey Charlie,,TRUE
+246,9/24/2021,Sauf Haus,,TRUE
+245,9/17/2021,Midlands,,TRUE
+244,9/10/2021,The Brig,,TRUE
+243,9/3/2021,Hook Hall,,TRUE
+242,8/27/2021,DC9,,TRUE
+241,8/13/2021,Midlands,,TRUE
+240,8/6/2021,Continental Beer Garden,,TRUE
+239,7/30/2021,Metrobar,,TRUE
+238,7/23/2021,Exiles,,TRUE
+237,7/16/2021,Franklin Hall,,TRUE
+236,7/9/2021,Solly's,,TRUE
+235,7/2/2021,Boardwalk,,TRUE
+233,6/25/2021,Exiles,,TRUE
+233,6/18/2021,Midlands,,TRUE
+232,6/11/2021,Lou's City Bar,,TRUE
+231,6/4/2021,Midlands,,TRUE
+230,5/28/2021,Bardo,,TRUE
+229,3/6/2020,Exiles,,TRUE
+228,2/28/2020,Big Hunt,,TRUE
+227,2/21/2020,H Street Country Club,,TRUE
+225,2/7/2020,Smoke & Barrel,,TRUE
+224,1/31/2020,Exiles,,TRUE
+223,1/24/2020,Franklin Hall,,TRUE
+222,1/17/2020,DC Reynolds,,TRUE
+221,1/10/2020,Passenger,,TRUE
+220,1/3/2020,Lou's City Bar,,TRUE
+219,12/20/2019,Exiles,,TRUE
+218,12/13/2019,Big Hunt,,TRUE
+217,12/6/2019,Franklin Hall,,TRUE
+216,11/22/2019,Union Pub,,TRUE
+215,11/15/2019,Smoke & Barrel,,TRUE
+214,11/8/2019,Passenger,,TRUE
+213,11/1/2019,Exiles,,TRUE
+212,10/25/2019,Big Hunt,,TRUE
+211,10/18/2019,Iron Horse,,TRUE
+210,10/11/2019,Union Pub,,TRUE
+209,10/4/2019,Franklin Hall,,TRUE
+208,9/27/2019,Iron Horse,,TRUE
+207,9/20/2019,Exiles,,TRUE
+206,8/13/2019,Midlands,,TRUE
+205,9/5/2019,Smoke & Barrel,,TRUE
+204,8/29/2019,Passenger,,TRUE
+203,8/23/2019,Union Pub,,TRUE
+202,8/16/2019,Exiles,,TRUE
+201,8/2/2019,Franklin Hall,,TRUE
+200,7/26/2019,Big Hunt,,TRUE
+199,7/19/2019,Lost & Found,,TRUE
+198,7/12/2019,Iron Horse,,TRUE
+197,6/28/2019,Church Hall,,TRUE
+196,6/21/2019,Solly's,,TRUE
+195,6/14/2019,Exiles,,TRUE
+194,6/7/2019,Buffalo Billiards,,TRUE
+193,5/31/2019,Midlands,,TRUE
+192,5/24/2019,Big Hunt,,TRUE
+191,5/17/2019,Union Pub,,TRUE
+190,5/10/2019,Lost & Found,,TRUE
+189,5/3/2019,Exiles,,TRUE
+188,4/26/2019,Silver Branch Brewing Company,,TRUE
+187,4/19/2019,Meridian Pint,,TRUE
+186,4/12/2019,Iron Horse,,TRUE
+185,4/5/2019,Ugly Mug,,TRUE
+184,3/29/2019,Franklin Hall,,TRUE
+183,3/22/2019,Buffalo Billiards,,TRUE
+182,3/14/2019,Smoke & Barrel,,TRUE
+181,3/8/2019,Iron Horse,,TRUE
+180,3/1/2019,Union Pub,,TRUE
+179,2/22/2019,Solly's,,TRUE
+178,2/15/2019,Exiles,,TRUE
+177,2/8/2019,Mr Smith's of Georgetown,,TRUE
+176,2/1/2019,Rocket Bar,,TRUE
+175,1/25/2019,Exiles,,TRUE
+174,1/18/2019,Meridian Pint,,TRUE
+173,1/11/2019,Union Pub,,TRUE
+172,1/4/2019,Solly's,,TRUE
+171,12/28/2018,Iron Horse,,TRUE
+170,12/14/2018,Lost & Found,,TRUE
+169,12/7/2018,Mr Smith's of Georgetown,,TRUE
+168,11/30/2018,Exiles,,TRUE
+167,11/16/2018,Rocket Bar,,TRUE
+166,11/9/2018,Solly's,,TRUE
+165,11/2/2018,Spider Kelly's,,TRUE
+164,10/26/2018,Meridian Pint,,TRUE
+122,10/19/2018,Union Pub,,TRUE
+121,10/12/2018,Smoke & Barrel,,TRUE
+161,10/5/2018,Mr Smith's of Georgetown,,TRUE
+160,9/28/2018,Rocket Bar,,TRUE
+159,9/21/2018,Exiles,,TRUE
+158,9/14/2018,The Eleanor,,TRUE
+157,9/7/2018,Ugly Mug,,TRUE
+156,8/31/2018,Smoke & Barrel,,TRUE
+155,8/24/2018,Solly's,,TRUE
+154,8/17/2018,Rocket Bar,,TRUE
+153,8/10/2018,Exiles,,TRUE
+152,8/3/2018,Meridian Pint,,TRUE
+151,7/27/2018,Iron Horse,,TRUE
+150,7/20/2018,Buffalo Billiards,,TRUE
+149,7/13/2018,Franklin Hall,,TRUE
+148,6/6/2018,Exiles,,TRUE
+147,6/29/2018,Meridian Pint,,TRUE
+146,6/22/2018,Rocket Bar,,TRUE
+145,6/15/2018,Lost & Found,,TRUE
+144,6/8/2018,Franklin Hall,,TRUE
+143,6/1/2018,Exiles,,TRUE
+142,5/25/2018,Solly's,,TRUE
+141,5/18/2018,Rocket Bar,,TRUE
+140,5/11/2018,Exiles,,TRUE
+139,5/4/2018,Spider Kelly's,,TRUE
+138,4/27/2018,Franklin Hall,,TRUE
+137,4/20/2018,Lost & Found,,TRUE
+136,4/13/2018,Exiles,,TRUE
+135,4/6/2018,Smoke & Barrel,,TRUE
+134,3/30/2018,Franklin Hall,,TRUE
+133,3/23/2018,Rocket Bar,,TRUE
+132,3/16/2018,Exiles,,TRUE
+131,3/9/2018,Solly's,,TRUE
+130,3/2/2018,Iron Horse,,TRUE
+129,2/23/2018,Franklin Hall,,TRUE
+129,2/16/2018,Exiles,,TRUE
+128,2/9/2018,Sauf Haus,,TRUE
+127,2/2/2018,Solly's,,TRUE
+126,1/26/2018,Iron Horse,,TRUE
+125,1/19/2018,Exiles,,TRUE
+124,1/12/2018,Franklin Hall,,TRUE
+123,1/5/2018,Solly's,,TRUE
+122,12/29/2017,Smoke & Barrel,,TRUE
+121,12/15/2017,Exiles,,TRUE
+120,12/8/2017,Lost & Found,,TRUE
+119,12/1/2017,Franklin Hall,,TRUE
+118,11/17/2017,Exiles,,TRUE
+117,11/10/2017,Buffalo Billiards,,TRUE
+116,11/3/2017,Midlands,,TRUE
+115,10/27/2017,Iron Horse,,TRUE
+114,10/20/2017,Franklin Hall,,TRUE
+113,10/13/2017,Exiles,,TRUE
+112,10/6/2017,Solly's,,TRUE
+111,9/29/2017,Continental Beer Garden,,TRUE
+109,9/15/2017,Exiles,,TRUE
+108,9/8/2017,Iron Horse,,TRUE
+107,9/1/2017,Franklin Hall,,TRUE
+106,8/25/2017,Continental Beer Garden,,TRUE
+105,8/18/2017,Exiles,,TRUE
+104,8/11/2017,Iron Horse,,TRUE
+103,8/4/2017,Franklin Hall,,TRUE
+102,7/28/2017,Exiles,,TRUE
+101,7/21/2017,Smoke & Barrel,,TRUE
+100,7/14/2017,Big Hunt,,TRUE
+99,7/7/2017,Exiles,,TRUE
+98,6/30/2017,Buffalo Billiards,,TRUE
+97,6/23/2017,Iron Horse,,TRUE
+96,6/16/2017,Mission (in Dupont),,TRUE
+95,6/9/2017,Exiles,,TRUE
+94,6/2/2017,Exiles,,TRUE
+93,5/26/2017,Iron Horse,,TRUE
+92,5/19/2017,Buffalo Billiards,,TRUE
+91,5/12/2017,Exiles,,TRUE
+90,5/5/2017,Exiles,,TRUE
+89,4/28/2017,Exiles,,TRUE
+88,4/21/2017,Exiles,,TRUE
+87,4/14/2017,Exiles,,TRUE
+86,4/7/2017,Exiles,,TRUE
+85,3/31/2017,Exiles,,TRUE
+84,3/24/2017,Iron Horse,,TRUE
+83,3/17/2017,Iron Horse,,TRUE
+82,3/10/2017,Big Hunt,,TRUE
+81,3/3/2017,Iron Horse,,TRUE
+80,2/24/2017,Exiles,,TRUE
+79,2/17/2017,Exiles,,TRUE
+78,2/10/2017,Exiles,,TRUE
+77,2/3/2017,Iron Horse,,TRUE
+76,1/27/2017,Buffalo Billiards,,TRUE
+75,1/13/2017,Buffalo Billiards,,TRUE
+74,1/6/2017,Exiles,,TRUE
+73,12/30/2016,Exiles,,TRUE
+72,12/16/2016,Buffalo Billiards,,TRUE
+71,12/9/2016,Iron Horse,,TRUE
+70,12/2/2016,Buffalo Billiards,,TRUE
+69,11/18/2016,Exiles,,TRUE
+68,11/11/2016,Buffalo Billiards,,TRUE
+67,11/4/2016,Buffalo Billiards,,TRUE
+66,10/28/2016,Exiles,,TRUE
+65,10/21/2016,Exiles,,TRUE
+64,10/7/2016,Exiles,,TRUE
+63,9/30/2016,Big Hunt,,TRUE
+62,9/23/2016,Exiles,,TRUE
+61,9/16/2016,Exiles,,TRUE
+60,9/9/2016,Iron Horse,,TRUE
+59,9/2/2016,Exiles,,TRUE
+58,8/26/2016,Exiles,,TRUE
+57,8/19/2016,Iron Horse,,TRUE
+56,8/12/2016,Iron Horse,,TRUE
+55,8/5/2016,Exiles,,TRUE
+54,7/29/2016,Big Hunt,,TRUE
+53,7/22/2016,Iron Horse,,TRUE
+52,7/15/2016,Exiles,,TRUE
+51,7/8/2016,Exiles,,TRUE
+50,7/1/2016,Exiles,,TRUE
+49,6/24/2016,Exiles,,TRUE
+48,6/17/2016,Exiles,,TRUE
+47,6/10/2016,Exiles,,TRUE
+46,6/3/2016,Penn Social,,TRUE
+45,5/27/2016,Solly's,,TRUE
+44,5/20/2016,Iron Horse,,TRUE
+43,5/13/2016,Big Hunt,,TRUE
+42,5/6/2016,Big Hunt,,TRUE
+41,4/29/2016,Big Hunt,,TRUE
+40,4/22/2016,Solly's,,TRUE
+39,4/15/2016,Iron Horse,,TRUE
+38,4/8/2016,Iron Horse,,TRUE
+37,4/1/2016,Iron Horse,,TRUE
+36,3/25/2016,Solly's,,TRUE
+35,3/18/2016,Iron Horse,,TRUE
+34,3/11/2016,Solly's,,TRUE
+33,3/4/2016,Iron Horse,,TRUE
+32,2/26/2016,Iron Horse,,TRUE
+31,2/19/2016,Iron Horse,,TRUE
+30,2/12/2016,Iron Horse,,TRUE
+29,2/5/2016,Iron Horse,,TRUE
+28,1/29/2016,Solly's,,TRUE
+28,1/22/2016,Solly's,,TRUE
+27,1/15/2016,Solly's,,TRUE
+26,1/8/2016,Solly's,,TRUE
+25,1/1/2016,Iron Horse,,TRUE
+24,12/18/2015,Solly's,,TRUE
+23,12/11/2015,Solly's,,TRUE
+22,12/4/2015,Solly's,,TRUE
+21,11/20/2015,Solly's,,TRUE
+20,11/13/2015,Recessions,,TRUE
+19,11/6/2015,Iron Horse,,TRUE
+18,10/30/2015,Stetson's,,TRUE
+17,10/23/2015,Stetson's,,TRUE
+16,10/16/2015,Stetson's,,TRUE
+15,10/9/2015,Stetson's,,TRUE
+14,10/3/2015,Penn Social,,TRUE
+13,9/25/2015,Stetson's,,TRUE
+12,9/18/2015,Sauf Haus,,TRUE
+11,9/11/2015,Stetson's,,TRUE
+10,9/4/2015,Stetson's,,TRUE
+9,8/28/2015,Stetson's,,TRUE
+8,8/21/2015,Stetson's,,TRUE
+7,8/14/2015,Stetson's,,TRUE
+6,8/7/2015,Iron Horse,,TRUE
+5,7/31/2015,Stetson's,,TRUE
+4,7/24/2015,Stetson's,,TRUE
+3,7/17/2015,Recessions,,TRUE
+2,7/10/2015,Buffalo Billiards,,TRUE
+1,7/3/2015,Solly's,DC9,TRUE
