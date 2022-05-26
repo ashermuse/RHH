@@ -4,6 +4,7 @@ import pandas as pd
 #import geopandas as gpd
 import plotly.graph_objs as go
 import plotly.express as px
+import random
 
 class RHH:
     def __init__(self):
@@ -60,6 +61,11 @@ class RHH:
             self.happy_hours = self.happy_hours.loc[self.happy_hours['Official']]
         elif filter == 'Unofficial':
             self.happy_hours = self.happy_hours.loc[self.happy_hours['Official'] == False]
+
+        AI_HH_loc = st.button('Generate Happy Hour Location')
+        if AI_HH_loc:
+            AI_HH_venue = random.choice(self.happy_hours['Venue'])
+            st.write(AI_HH_venue)
 
         st.title("Happy Hour Map")
         fig = go.Figure()
