@@ -43,13 +43,8 @@ class RHH:
         self.metro_stations = pd.read_csv("../data/DC_Metro_Stations.csv")
         self.metro_lines = {'blue':0,'orange':0,'silver':0,'red':0,'green':0,'yellow':0}
         
-
-        #Grouped by DC/VA neighborhoods as defined by OpenGov (DC) and OSM (VA/MD)
-        #Temperature
-
-
     def frontend(self):
-        st.title("DC Reddit Happy Hour")
+        st.title("DC Reddit Happy Hour Analytics")
     
         # Update the happy_hours based on selected date range
         start_date = st.sidebar.date_input('Front date', value = min(self.happy_hours['Date']), min_value = min(self.happy_hours['Date']), max_value = datetime.date.today())
@@ -62,12 +57,12 @@ class RHH:
         elif filter == 'Unofficial':
             self.happy_hours = self.happy_hours.loc[self.happy_hours['Official'] == False]
 
-        AI_HH_loc = st.button('Generate Happy Hour Location')
+        AI_HH_loc = st.sidebar.button('Generate Happy Hour Location')
         if AI_HH_loc:
-            AI_HH_venue = random.choice(self.happy_hours['Venue'])
-            st.write(AI_HH_venue)
+            AI_HH_venue = self.happy_hours['Venue'].sample().iloc[0]
+            st.sidebar.write(AI_HH_venue)
 
-        st.title("Happy Hour Map")
+        st.subheader("Happy Hour Map")
         fig = go.Figure()
 
         # Happy Hours
@@ -118,7 +113,15 @@ class RHH:
 
         st.plotly_chart(fig)
 
-        st.title("Metro Preferences")
+        st.subheader("Weather Statistics")
+        col1, col2 = st.columns(2)
+        col1.metric("Temperature", str(self.happy_hours['Temperature'].mean())[0:4] + " °F")
+        col2.metric("Wind", str(self.happy_hours['Wind_Speed'].mean())[0:4] + " km/h")
+        col1, col2 = st.columns(2)
+        col1.metric("Humidity", str(self.happy_hours['Relative_Humidity'].mean())[0:4] + "%")
+        col2.metric("Rain", str(self.happy_hours['did_rain'].value_counts(normalize=True).loc[True]*100)[0:4] + "%")
+
+        st.subheader("Metro Preferences")
 
         self.compute_metro_preference()
         df_metro_lines = pd.DataFrame.from_dict(self.metro_lines, orient='index', columns=['Visits'])
@@ -127,6 +130,12 @@ class RHH:
         fig.update_layout(showlegend=False)
         st.plotly_chart(fig)
 
+        st.subheader("Venue Preferences")
+        venue_counts = self.happy_hours.groupby(by='Venue').count()
+        fig = px.bar(venue_counts, x=venue_counts.index, y='Number')
+        st.plotly_chart(fig)
+
+        st.subheader("Raw Data")
         st.write(self.happy_hours)
 
     def start(self):
