@@ -14,7 +14,7 @@ class RHH:
 
     def compute_metro_preference(self):
         for index, row in self.happy_hours.iterrows():
-            close_metros = row['Closest Metros'].replace('[', '').replace(']', '').replace('"', '').replace("'", '').split(',')
+            close_metros = row['Closest Metros']
             close_metros = [metro.strip() for metro in close_metros]
             close_lines = []
             
@@ -29,6 +29,19 @@ class RHH:
             
             for line in close_lines:
                 self.metro_lines[line] += 1
+        
+    def metro_cleanup(self, metros):
+        metros = metros.split(',')
+        for i in range(len(metros)):
+            metros[i] = metros[i].strip('\'"[] ')
+        return metros
+    
+    def get_metro_lines(self, metros):
+        lines = []
+        for metro in metros:
+            lines.extend(self.metro_stations.loc[self.metro_stations['Name'] == metro].iloc[0, 4].replace(' ', '').split(','))
+        lines = list(set(lines))
+        return lines
 
     def backend(self):
         self.happy_hours = pd.read_csv("../data/RHH_Events_Data.csv")
@@ -39,6 +52,9 @@ class RHH:
         self.happy_hours = self.happy_hours.join(self.venues.set_index('Venue'), on='Venue', how='outer').drop('Visits', axis=1)
         self.happy_hours = self.happy_hours.sort_values(by=['Date'], ascending=False)
 
+        self.happy_hours['Closest Metros'] = self.happy_hours['Closest Metros'].apply(self.metro_cleanup)
+        self.happy_hours['Closest Metros Label'] = self.happy_hours['Closest Metros'].apply(lambda metros: ', '.join(metros))
+
 
         self.metro_stations = pd.read_csv("../data/DC_Metro_Stations.csv")
         self.metro_lines = {'blue':0,'orange':0,'silver':0,'red':0,'green':0,'yellow':0}
@@ -47,8 +63,8 @@ class RHH:
         st.title("DC Reddit Happy Hour Analytics")
     
         # Update the happy_hours based on selected date range
-        start_date = st.sidebar.date_input('Front date', value = min(self.happy_hours['Date']), min_value = min(self.happy_hours['Date']), max_value = datetime.date.today())
-        end_date = st.sidebar.date_input('End date', value = datetime.date.today(), min_value = min(self.happy_hours['Date']), max_value = datetime.date.today())
+        start_date = st.sidebar.date_input('Start Cutoff', value = min(self.happy_hours['Date']), min_value = min(self.happy_hours['Date']), max_value = datetime.date.today())
+        end_date = st.sidebar.date_input('End Cutoff', value = datetime.date.today(), min_value = min(self.happy_hours['Date']), max_value = datetime.date.today())
         self.happy_hours = self.happy_hours.loc[(self.happy_hours['Date'] > start_date) & (self.happy_hours['Date'] < end_date)]
 
         filter = st.sidebar.radio('Official HH Toggle', ['Both', 'Official', 'Unofficial'])
@@ -57,10 +73,23 @@ class RHH:
         elif filter == 'Unofficial':
             self.happy_hours = self.happy_hours.loc[self.happy_hours['Official'] == False]
 
+       
+
         AI_HH_loc = st.sidebar.button('Generate Happy Hour Location')
+        ai_options = st.sidebar.checkbox('AI Options')
+        if ai_options:
+            ai_metro_lines = st.sidebar.multiselect("Must Use: Metro Lines", ['blue','orange','silver','red','green','yellow'])
+        
         if AI_HH_loc:
-            AI_HH_venue = self.happy_hours['Venue'].sample().iloc[0]
-            st.sidebar.write(AI_HH_venue)
+            ai_df = self.happy_hours
+            if ai_options:
+                if len(ai_metro_lines) != 0:
+                    ai_df['Metro Lines'] = ai_df['Closest Metros'].apply(lambda metros: self.get_metro_lines(metros))
+                    ai_df = ai_df.loc[ai_df['Metro Lines'].apply(lambda metro_lines: any(x in metro_lines for x in ai_metro_lines))]
+
+            AI_HH_venue = ai_df['Venue'].sample().iloc[0]
+            st.sidebar.title("HAPPY HOUR LOCATION:")
+            st.sidebar.subheader(AI_HH_venue)
 
         st.subheader("Happy Hour Map")
         fig = go.Figure()
@@ -75,7 +104,7 @@ class RHH:
                     color='teal',
                     opacity=1
                 ),
-                text= "<b>" + self.happy_hours['Venue'] + "</b><br>" + self.happy_hours['Closest Metros'],
+                text= "<b>" + self.happy_hours['Venue'] + "</b><br>" + self.happy_hours['Closest Metros Label'],
                 hovertemplate="%{text}<extra></extra>"
             ))
 
