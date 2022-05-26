@@ -8,8 +8,10 @@ import random
 
 class RHH:
     def __init__(self):
-        self.mapbox_access_token = open('../credentials/mapbox_key.txt').read()
-        self.google_API_key = open('../credentials/google_api_key.txt').read()
+        try:
+            self.mapbox_access_token = open('../credentials/mapbox_key.txt').read()
+        except:
+            self.mapbox_access_token = st.secrets["mapbox_token"]
         px.set_mapbox_access_token(self.mapbox_access_token)
 
     def compute_metro_preference(self):
