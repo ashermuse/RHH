@@ -64,36 +64,31 @@ class RHH:
 
     def backend(self):
         try:
-            self.happy_hours_cache = pd.read_csv("../data/RHH_Events_Data.csv")
-            self.venues_cache = pd.read_csv("../data/RHH_Venues.csv")
-            self.metro_stations_cache = pd.read_csv("../data/DC_Metro_Stations.csv")
+            self.happy_hours = pd.read_csv("../data/RHH_Events_Data.csv")
+            self.venues = pd.read_csv("../data/RHH_Venues.csv")
+            self.metro_stations = pd.read_csv("../data/DC_Metro_Stations.csv")
         except:
-            self.happy_hours_cache    = self.data_from_sheets("RHH_Events_Data", "1JDFP204BOKw1z057S9dvT3d0ND9u7FYu0IhjotkxUhE")
-            self.venues_cache         = self.data_from_sheets("RHH_Venues", "1gd2dX3rmsD9R6IE7ncDwbeaVRj0sFonunaJqx939MZw")
-            self.metro_stations_cache = self.data_from_sheets("DC_Metro_Stations", "1ACHprBIkogbxG-Uz_L3mpIqZpAiNou47ZtTC6BaCYBs")
+            self.happy_hours    = self.data_from_sheets("RHH_Events_Data", "1JDFP204BOKw1z057S9dvT3d0ND9u7FYu0IhjotkxUhE")
+            self.venues         = self.data_from_sheets("RHH_Venues", "1gd2dX3rmsD9R6IE7ncDwbeaVRj0sFonunaJqx939MZw")
+            self.metro_stations = self.data_from_sheets("DC_Metro_Stations", "1ACHprBIkogbxG-Uz_L3mpIqZpAiNou47ZtTC6BaCYBs")
 
-        self.happy_hours_cache['Date'] = pd.to_datetime(self.happy_hours_cache['Date']).dt.date
+        self.happy_hours['Date'] = pd.to_datetime(self.happy_hours['Date']).dt.date
 
-        self.happy_hours_cache = self.happy_hours_cache.join(self.venues.set_index('Venue'), on='Venue', how='outer').drop('Visits', axis=1)
-        self.happy_hours_cache = self.happy_hours_cache.sort_values(by=['Date'], ascending=False)
+        self.happy_hours = self.happy_hours.join(self.venues.set_index('Venue'), on='Venue', how='outer').drop('Visits', axis=1)
+        self.happy_hours = self.happy_hours.sort_values(by=['Date'], ascending=False)
 
-        self.happy_hours_cache['did_rain'] = self.happy_hours_cache['did_rain'].map({'TRUE': True, 'FALSE': False})
-        self.happy_hours_cache['Official'] = self.happy_hours_cache['Official'].map({'TRUE': True, 'FALSE': False}) 
-        self.happy_hours_cache["Temperature"] = pd.to_numeric(self.happy_hours_cache["Temperature"])
-        self.happy_hours_cache["Wind_Speed"] = pd.to_numeric(self.happy_hours_cache["Wind_Speed"])
-        self.happy_hours_cache["Relative_Humidity"] = pd.to_numeric(self.happy_hours_cache["Relative_Humidity"])
+        self.happy_hours['did_rain'] = self.happy_hours['did_rain'].map({'TRUE': True, 'FALSE': False})
+        self.happy_hours['Official'] = self.happy_hours['Official'].map({'TRUE': True, 'FALSE': False}) 
+        self.happy_hours["Temperature"] = pd.to_numeric(self.happy_hours["Temperature"])
+        self.happy_hours["Wind_Speed"] = pd.to_numeric(self.happy_hours["Wind_Speed"])
+        self.happy_hours["Relative_Humidity"] = pd.to_numeric(self.happy_hours["Relative_Humidity"])
 
-        self.happy_hours_cache['Closest Metros'] = self.happy_hours_cache['Closest Metros'].apply(self.metro_cleanup)
-        self.happy_hours_cache['Closest Metros Label'] = self.happy_hours_cache['Closest Metros'].apply(lambda metros: ', '.join(metros))
+        self.happy_hours['Closest Metros'] = self.happy_hours['Closest Metros'].apply(self.metro_cleanup)
+        self.happy_hours['Closest Metros Label'] = self.happy_hours['Closest Metros'].apply(lambda metros: ', '.join(metros))
         
-        self.metro_lines_cache = {'blue':0,'orange':0,'silver':0,'red':0,'green':0,'yellow':0}
+        self.metro_lines = {'blue':0,'orange':0,'silver':0,'red':0,'green':0,'yellow':0}
         
     def frontend(self):
-        self.happy_hours = self.happy_hours_cache.copy()
-        self.venues = self.venues_cache.copy()
-        self.metro_stations = self.metro_stations_cache.copy()
-        self.metro_lines = self.metro_lines_cache
-
         st.title("DC Reddit Happy Hour Analytics")
 
         # Update the happy_hours based on selected date range
