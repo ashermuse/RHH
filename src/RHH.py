@@ -77,8 +77,8 @@ class RHH:
         self.happy_hours = self.happy_hours.join(self.venues.set_index('Venue'), on='Venue', how='outer').drop('Visits', axis=1)
         self.happy_hours = self.happy_hours.sort_values(by=['Date'], ascending=False)
 
-        self.happy_hours['did_rain'] = self.happy_hours['did_rain'].map({'True': True, 'False': False})
-        self.happy_hours['Official'] = self.happy_hours['Official'].map({'True': True, 'False': False}) 
+        #self.happy_hours['did_rain'] = self.happy_hours['did_rain'].map({'True': True, 'False': False})
+        #self.happy_hours['Official'] = self.happy_hours['Official'].map({'True': True, 'False': False}) 
         self.happy_hours["Temperature"] = pd.to_numeric(self.happy_hours["Temperature"])
         self.happy_hours["Wind_Speed"] = pd.to_numeric(self.happy_hours["Wind_Speed"])
         self.happy_hours["Relative_Humidity"] = pd.to_numeric(self.happy_hours["Relative_Humidity"])
