@@ -91,8 +91,6 @@ class RHH:
     def frontend(self):
         st.title("DC Reddit Happy Hour Analytics")
 
-        st.write(self.happy_hours)
-
         # Update the happy_hours based on selected date range
         start_date = st.sidebar.date_input('Start Cutoff', value = min(self.happy_hours['Date']), min_value = min(self.happy_hours['Date']), max_value = datetime.date.today())
         end_date = st.sidebar.date_input('End Cutoff', value = datetime.date.today(), min_value = min(self.happy_hours['Date']), max_value = datetime.date.today())
