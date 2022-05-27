@@ -77,7 +77,8 @@ class RHH:
         self.happy_hours = self.happy_hours.join(self.venues.set_index('Venue'), on='Venue', how='outer').drop('Visits', axis=1)
         self.happy_hours = self.happy_hours.sort_values(by=['Date'], ascending=False)
 
-        self.happy_hours = self.happy_hours.astype({"did_rain":bool, "Official":bool})
+        self.happy_hours['did_rain'] = self.happy_hours['did_rain'].map({'True': True, 'False': False})
+        self.happy_hours['Official'] = self.happy_hours['Official'].map({'True': True, 'False': False}) 
         self.happy_hours["Temperature"] = pd.to_numeric(self.happy_hours["Temperature"])
         self.happy_hours["Wind_Speed"] = pd.to_numeric(self.happy_hours["Wind_Speed"])
         self.happy_hours["Relative_Humidity"] = pd.to_numeric(self.happy_hours["Relative_Humidity"])
@@ -95,12 +96,11 @@ class RHH:
         end_date = st.sidebar.date_input('End Cutoff', value = datetime.date.today(), min_value = min(self.happy_hours['Date']), max_value = datetime.date.today())
         self.happy_hours = self.happy_hours.loc[(self.happy_hours['Date'] > start_date) & (self.happy_hours['Date'] < end_date)]
 
-        # Disbaled for streamlit app
-        #filter = st.sidebar.radio('Official HH Toggle', ['Both', 'Official', 'Unofficial'])
-        #if filter == 'Official':
-        #    self.happy_hours = self.happy_hours.loc[self.happy_hours['Official']]
-        #elif filter == 'Unofficial':
-        #    self.happy_hours = self.happy_hours.loc[self.happy_hours['Official'] == False]
+        filter = st.sidebar.radio('Official HH Toggle', ['Both', 'Official', 'Unofficial'])
+        if filter == 'Official':
+           self.happy_hours = self.happy_hours.loc[self.happy_hours['Official']]
+        elif filter == 'Unofficial':
+           self.happy_hours = self.happy_hours.loc[self.happy_hours['Official'] == False]
 
        
 
