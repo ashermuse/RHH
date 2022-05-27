@@ -74,7 +74,7 @@ class RHH:
 
         self.happy_hours_cache['Date'] = pd.to_datetime(self.happy_hours_cache['Date']).dt.date
 
-        self.happy_hours_cache = self.happy_hours_cache.join(self.venues_cache.set_index('Venue'), on='Venue', how='outer').drop('Visits', axis=1)
+        self.happy_hours_cache = self.happy_hours_cache.join(self.venues.set_index('Venue'), on='Venue', how='outer').drop('Visits', axis=1)
         self.happy_hours_cache = self.happy_hours_cache.sort_values(by=['Date'], ascending=False)
 
         self.happy_hours_cache['did_rain'] = self.happy_hours_cache['did_rain'].map({'TRUE': True, 'FALSE': False})
