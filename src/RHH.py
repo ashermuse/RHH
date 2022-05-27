@@ -79,9 +79,10 @@ class RHH:
         self.happy_hours = self.happy_hours.join(self.venues.set_index('Venue'), on='Venue', how='outer').drop('Visits', axis=1)
         self.happy_hours = self.happy_hours.sort_values(by=['Date'], ascending=False)
 
-        self.happy_hours["Temperature"] = pd.to_numeric(self.happy_hours["Temperature"])
-        self.happy_hours["Wind_Speed"] = pd.to_numeric(self.happy_hours["Wind_Speed"])
-        self.happy_hours["Relative_Humidity"] = pd.to_numeric(self.happy_hours["Relative_Humidity"])
+        df = df.astype({"Temperature": float, "Wind_Speed": float, "Relative_Humidity": float, "Percipitation_mm": float, "Snow_mm": float, "did_rain":boolean})
+        #self.happy_hours["Temperature"] = pd.to_numeric(self.happy_hours["Temperature"])
+        #self.happy_hours["Wind_Speed"] = pd.to_numeric(self.happy_hours["Wind_Speed"])
+        #self.happy_hours["Relative_Humidity"] = pd.to_numeric(self.happy_hours["Relative_Humidity"])
 
         self.happy_hours['Closest Metros'] = self.happy_hours['Closest Metros'].apply(self.metro_cleanup)
         self.happy_hours['Closest Metros Label'] = self.happy_hours['Closest Metros'].apply(lambda metros: ', '.join(metros))
