@@ -62,6 +62,7 @@ class RHH:
         df = df.reset_index().drop(columns=['index'])
         return df
 
+    @st.cache(allow_output_mutation=True)
     def backend(self):
         try:
             self.happy_hours = pd.read_csv("../data/RHH_Events_Data.csv")
