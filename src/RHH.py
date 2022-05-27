@@ -95,11 +95,12 @@ class RHH:
         end_date = st.sidebar.date_input('End Cutoff', value = datetime.date.today(), min_value = min(self.happy_hours['Date']), max_value = datetime.date.today())
         self.happy_hours = self.happy_hours.loc[(self.happy_hours['Date'] > start_date) & (self.happy_hours['Date'] < end_date)]
 
-        filter = st.sidebar.radio('Official HH Toggle', ['Both', 'Official', 'Unofficial'])
-        if filter == 'Official':
-            self.happy_hours = self.happy_hours.loc[self.happy_hours['Official']]
-        elif filter == 'Unofficial':
-            self.happy_hours = self.happy_hours.loc[self.happy_hours['Official'] == False]
+        # Disbaled for streamlit app
+        #filter = st.sidebar.radio('Official HH Toggle', ['Both', 'Official', 'Unofficial'])
+        #if filter == 'Official':
+        #    self.happy_hours = self.happy_hours.loc[self.happy_hours['Official']]
+        #elif filter == 'Unofficial':
+        #    self.happy_hours = self.happy_hours.loc[self.happy_hours['Official'] == False]
 
        
 
