@@ -62,8 +62,7 @@ class RHH:
         df = df.reset_index().drop(columns=['index'])
         return df
 
-    @st.cache
-    def backend(self, flag):
+    def backend(self):
         try:
             self.happy_hours = pd.read_csv("../data/RHH_Events_Data.csv")
             self.venues = pd.read_csv("../data/RHH_Venues.csv")
@@ -198,7 +197,7 @@ class RHH:
         st.write(self.happy_hours)
 
     def start(self):
-        self.backend('flag-test')
+        self.backend()
         self.frontend()
 
     
