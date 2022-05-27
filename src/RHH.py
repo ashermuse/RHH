@@ -5,13 +5,16 @@ import pandas as pd
 import plotly.graph_objs as go
 import plotly.express as px
 import random
+from googleapiclient.discovery import build
 
 class RHH:
     def __init__(self):
         try:
             self.mapbox_access_token = open('../credentials/mapbox_key.txt').read()
+            self.google_api_key = open('../credentials/google_api_key.txt').read()
         except:
             self.mapbox_access_token = st.secrets["mapbox_token"]
+            self.google_api_key = st.secrets["google_api_key"]
         px.set_mapbox_access_token(self.mapbox_access_token)
 
     def compute_metro_preference(self):
@@ -45,20 +48,40 @@ class RHH:
         lines = list(set(lines))
         return lines
 
-    def backend(self):
-        self.happy_hours = pd.read_csv("../data/RHH_Events_Data.csv")
-        self.happy_hours['Date'] = pd.to_datetime(self.happy_hours['Date']).dt.date
+    def data_from_sheets(self, name, id):
+        service = build('sheets', 'v4', developerKey=self.google_api_key)
 
-        self.venues = pd.read_csv("../data/RHH_Venues.csv")
+        sheet = service.spreadsheets()
+        result = sheet.values().get(spreadsheetId=id,
+                                    range= name + '!A:AA').execute()
+        values = result.get('values', [])
+
+        df = pd.DataFrame(values)
+        df.columns = df.iloc[0]
+        df = df.drop(0)
+        df = df.reset_index().drop(columns=['index'])
+        return df
+
+
+    @st.cache
+    def backend(self):
+        try:
+            self.happy_hours = pd.read_csv("../data/RHH_Events_Data.csv")
+            self.venues = pd.read_csv("../data/RHH_Venues.csv")
+            self.metro_stations = pd.read_csv("../data/DC_Metro_Stations.csv")
+        except:
+            self.happy_hours    = self.data_from_sheets("RHH_Events_Data", "1JDFP204BOKw1z057S9dvT3d0ND9u7FYu0IhjotkxUhE")
+            self.venues         = self.data_from_sheets("RHH_Venues", "1gd2dX3rmsD9R6IE7ncDwbeaVRj0sFonunaJqx939MZw")
+            self.metro_stations = self.data_from_sheets("DC_Metro_Stations", "1ACHprBIkogbxG-Uz_L3mpIqZpAiNou47ZtTC6BaCYBs")
+
+        self.happy_hours['Date'] = pd.to_datetime(self.happy_hours['Date']).dt.date
 
         self.happy_hours = self.happy_hours.join(self.venues.set_index('Venue'), on='Venue', how='outer').drop('Visits', axis=1)
         self.happy_hours = self.happy_hours.sort_values(by=['Date'], ascending=False)
 
         self.happy_hours['Closest Metros'] = self.happy_hours['Closest Metros'].apply(self.metro_cleanup)
         self.happy_hours['Closest Metros Label'] = self.happy_hours['Closest Metros'].apply(lambda metros: ', '.join(metros))
-
-
-        self.metro_stations = pd.read_csv("../data/DC_Metro_Stations.csv")
+        
         self.metro_lines = {'blue':0,'orange':0,'silver':0,'red':0,'green':0,'yellow':0}
         
     def frontend(self):

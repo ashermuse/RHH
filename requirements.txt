@@ -31,6 +31,13 @@ flit_core==3.7.1
 fonttools==4.33.3
 gitdb==4.0.9
 GitPython==3.1.27
+google-api-core==2.8.1
+google-api-python-client==2.49.0
+google-auth==2.6.6
+google-auth-httplib2==0.1.0
+google-auth-oauthlib==0.5.1
+googleapis-common-protos==1.56.2
+httplib2==0.20.4
 idna==3.3
 importlib-metadata==4.11.4
 importlib-resources==5.7.1
@@ -59,6 +66,8 @@ nbformat==5.4.0
 nest-asyncio==1.5.5
 notebook==6.4.11
 numpy==1.22.3
+oauth2client==4.1.3
+oauthlib==3.2.0
 packaging==21.3
 pandas==1.4.2
 pandocfilters==1.5.0
@@ -75,6 +84,8 @@ protobuf==3.20.1
 psutil==5.9.1
 pure-eval==0.2.2
 pyarrow==6.0.1
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
 pycparser==2.21
 pydeck==0.7.1
 Pygments==2.12.0
@@ -91,6 +102,8 @@ pytz-deprecation-shim==0.1.0.post0
 PyYAML==6.0
 pyzmq==23.0.0
 requests==2.27.1
+requests-oauthlib==1.3.1
+rsa==4.8
 s3transfer==0.5.2
 semver==2.13.0
 Send2Trash==1.8.0
@@ -113,6 +126,7 @@ tzdata==2022.1
 tzlocal==4.2
 unicodedata2==14.0.0
 update-checker==0.18.0
+uritemplate==4.1.1
 urllib3==1.26.9
 validators==0.18.2
 watchdog==2.1.8
