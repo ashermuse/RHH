@@ -80,6 +80,8 @@ class RHH:
         self.happy_hours = self.happy_hours.sort_values(by=['Date'], ascending=False)
 
         self.happy_hours["Temperature"] = pd.to_numeric(self.happy_hours["Temperature"])
+        self.happy_hours["Wind_Speed"] = pd.to_numeric(self.happy_hours["Wind_Speed"])
+        self.happy_hours["Relative_Humidity"] = pd.to_numeric(self.happy_hours["Relative_Humidity"])
 
         self.happy_hours['Closest Metros'] = self.happy_hours['Closest Metros'].apply(self.metro_cleanup)
         self.happy_hours['Closest Metros Label'] = self.happy_hours['Closest Metros'].apply(lambda metros: ', '.join(metros))
